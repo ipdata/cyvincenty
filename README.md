@@ -23,21 +23,27 @@ pip install cyvincenty
 
 
 ## Benchmarks
+
+Using ipython
+
 ```
-from cyvincenty import vincenty
-import uvincenty
-from vincenty import vincenty
-import geopy.distance
+>> import cyvincenty
+>> import uvincenty
+>> import vincenty
+>> import geopy.distance
 
-boston = (42.3541165, -71.0693514)
-newyork = (40.7791472, -73.9680804)
+>> boston = (42.3541165, -71.0693514)
+>> newyork = (40.7791472, -73.9680804)
 
-%timeit uvincenty.vincenty(*boston, *newyork)
+>> %timeit uvincenty.vincenty(*boston, *newyork)
+744 ns ± 2.58 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 
-%timeit cyvincenty(*boston, *newyork)
+>> %timeit cyvincenty.vincenty(*boston, *newyork)
+736 ns ± 2.82 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 
-%timeit vincenty(boston, newyork)
+>> %timeit vincenty.vincenty(boston, newyork)
+10.2 µs ± 60.1 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
 
-%timeit geopy.distance.geodesic(boston, newyork)
-
+>> %timeit geopy.distance.geodesic(boston, newyork)
+191 µs ± 1.52 µs per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
 ```
