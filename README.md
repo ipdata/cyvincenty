@@ -2,7 +2,7 @@
 
 A fast Cython implementation of the Vincenty algorithm for calculating the distance in kilometers between 2 co-ordinates.
 
-This module is heavily inspired by [uvincenty](https://github.com/vivescere/uvincenty) - a pure C Python extension - and is just as fast, if not slightly faster despite being written in Python! (technically Cython)
+This module is heavily inspired by [uvincenty](https://github.com/vivescere/uvincenty) and [vincenty](https://github.com/maurycyp/vincenty). It is just as fast if not slightly faster than uvincenty which is a pure C Python extension despite being written in Python! (technically Cython).
 
 ## Installation
 
