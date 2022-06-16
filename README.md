@@ -6,13 +6,13 @@ This module is heavily inspired by [uvincenty](https://github.com/vivescere/uvin
 
 ## Installation
 
-```
+```bash
 pip install cyvincenty
 ```
 
 ## Usage
 
-```
+```python
 >> from cyvincenty import vincenty
 
 >> boston = (42.3541165, -71.0693514)
@@ -26,7 +26,7 @@ pip install cyvincenty
 
 Using ipython
 
-```
+```python
 >> import cyvincenty
 >> import uvincenty
 >> import vincenty
