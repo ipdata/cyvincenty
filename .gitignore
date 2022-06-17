@@ -9,3 +9,6 @@ __pycache__/
 *.egg
 *.pyc
 .hypothesis/
+*.c
+*.so
+*.html

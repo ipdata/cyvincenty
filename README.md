@@ -18,7 +18,7 @@ pip install cyvincenty
 >> boston = (42.3541165, -71.0693514)
 >> newyork = (40.7791472, -73.9680804)
 
->> cyvincenty(*boston, *newyork)
+>> vincenty(*boston, *newyork)
 ```
 
 
