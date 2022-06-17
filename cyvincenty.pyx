@@ -1,7 +1,5 @@
 import cython
 
-from libc.math cimport sin, cos, tan, atan, atan2, pow, fabs, sqrt
-
 # WGS 84
 cdef int a = 6378137  # meters
 cdef double f = 1 / 298.257223563
@@ -13,6 +11,29 @@ cdef double MILES_PER_KILOMETER = 0.621371
 cdef int MAX_ITERATIONS = 200
 cdef double CONVERGENCE_THRESHOLD = 1e-12  # .000,000,000,001
 
+cdef extern from "math.h":
+    double sin(double x)
+
+cdef extern from "math.h":
+    double cos(double x)
+
+cdef extern from "math.h":
+    double tan(double x)
+
+cdef extern from "math.h":
+    double atan(double x)
+
+cdef extern from "math.h":
+    double atan2(double x, double y)
+
+cdef extern from "math.h":
+    double pow(double x, double y)
+
+cdef extern from "math.h":
+    double fabs(double x)
+
+cdef extern from "math.h":
+    double sqrt(double x)
 
 cdef double degreesToRadians(double angleDegrees):
     return ((angleDegrees) * PI / 180.0)
